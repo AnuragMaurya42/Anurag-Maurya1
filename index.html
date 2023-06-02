@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to My Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .colorful {
+      background-color: #0ffd13; /* Example colorful background color */
+    }
+
+    body {
+      background-color: pink;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    #images {
+      display: none;
+      margin-top: 30px;
+    }
+
+    #images img {
+      width: 200px;
+      margin: 10px;
+      transition: transform 1s ease;
+    }
+
+    #password-input {
+      margin-top: 20px;
+    }
+
+    .move-images {
+      transform: translateX(200px);
+    }
+
+    /* Additional styles for full-screen display on mobile */
+    @media screen and (max-width: 600px) {
+      body {
+        padding: 0;
+      }
+
+      h1 {
+        margin-top: 50px;
+      }
+
+      #password-input {
+        margin-top: 50px;
+      }
+    }
+
+    /* Styles for the updated button */
+    .custom-btn {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .custom-btn:hover {
+      background-color: #ff8533;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Website</h1>
+
+  <form>
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" required>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+
+  <div id="result"></div>
+
+  <div id="images">
+    <h2>Images</h2>
+    <img src="DALL·E 2023-05-30 15.59.45 - Convert the girl into Indian police dress .png" alt="Image 1">
+    <img src="DALL·E 2023-05-30 16.00.37 - Convert the girl into Indian police dress khaki shirt .png" alt="Image 2">
+    <img src="DALL·E 2023-05-30 16.00.51 - Convert the girl into Indian police dress khaki shirt .png" alt="Image 3">
+
+    <img src="DALL·E 2023-05-30 16.01.02 - Convert the girl into Indian police dress khaki shirt .png" alt="Image 1">
+    <img src="DALL·E 2023-05-30 16.02.01 - Convert the girl into Indian Sub inspector dress .png" alt="Image 2">
+    <img src="DALL·E 2023-05-30 16.02.11 - Convert the girl into Indian Sub inspector dress .png" alt="Image 3">
+
+    <img src="DALL·E 2023-05-30 16.03.22 - Convert the girl into Indian police dress khaki shirt .png" alt="Image 1">
+    <img src="DALL·E 2023-05-30 18.31.43 - Convert the girl into Indian police dress khaki shirt .png" alt="Image 2">
+    <img src="DALL·E 2023-05-30 18.32.43 - Convert the girl into Indian police dress khaki shirt and increase the hair length.png" alt="Image 3">
+  </div>
+
+  <div id="password-input">
+    <label for="password">Enter the password to See the Future SI (Sub inspector):</label>
+    <input type="password" id="password" required>
+    <button type="button" class="custom-btn" onclick="checkPassword()">Enter</button>
+  </div>
+
+  <script>
+    function checkPassword() {
+      var password = document.getElementById('password').value;
+      var images = document.getElementById('images');
+      var body = document.querySelector('body');
+
+      if (password === 'itsyou') {
+        images.style.display = 'block';
+        images.classList.add('move-images');
+        body.classList.add('colorful');
+      } else {
+        alert('Incorrect password. Please try again.');
+      }
+    }
+  </script>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var name = document.getElementById('name').value;
+      var result = document.getElementById('result');
+      result.innerHTML = '<h2>Welcome to My Website, ' + name + '!</h2>';
+    });
+  </script>
+</body>
+</html>
