@@ -80,6 +80,17 @@
     .custom-btn:hover {
       background-color: #ff8533;
     }
+
+    /* Media query for Android phones */
+    @media screen and (max-width: 480px) and (max-height: 800px) and (-webkit-device-pixel-ratio: 1.5) {
+      h1 {
+        font-size: 24px;
+      }
+
+      .btn {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -120,7 +131,7 @@
       var images = document.getElementById('images');
       var body = document.querySelector('body');
 
-      if (password === 'itsyou') {
+      if (password === '123') {
         images.style.display = 'block';
         images.classList.add('move-images');
         body.classList.add('colorful');
