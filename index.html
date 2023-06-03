@@ -12,6 +12,7 @@
       background-color: pink;
       text-align: center;
       font-family: Arial, sans-serif;
+      padding: 20px; /* Added padding to the body */
     }
 
     h1 {
@@ -34,12 +35,17 @@
     #images {
       display: none;
       margin-top: 30px;
+      margin-left: -230px;
+      border: 1px solid black; /* Added border to the image container */
+      padding: 10px; /* Added padding to the image container */
     }
 
     #images img {
       width: 200px;
       margin: 10px;
       transition: transform 1s ease;
+      border: 1px solid black; /* Added border to the images */
+      border-radius: 5px; /* Added border radius to the images */
     }
 
     #password-input {
@@ -79,17 +85,6 @@
 
     .custom-btn:hover {
       background-color: #ff8533;
-    }
-
-    /* Media query for Android phones */
-    @media screen and (max-width: 480px) and (max-height: 800px) and (-webkit-device-pixel-ratio: 1.5) {
-      h1 {
-        font-size: 24px;
-      }
-
-      .btn {
-        font-size: 16px;
-      }
     }
   </style>
 </head>
@@ -131,8 +126,8 @@
       var images = document.getElementById('images');
       var body = document.querySelector('body');
 
-      if (password === '123') {
-        images.style.display = 'block';
+      if (password === 'itsyou') {
+        images.style.display = 'contents';
         images.classList.add('move-images');
         body.classList.add('colorful');
       } else {
